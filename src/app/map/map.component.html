@@ -1,0 +1,18 @@
+<!--div #map3dContainer id="map3d-container" style="width: 100%; height: 100vh; position: relative;">
+  < This container will hold the 3D map and the simulated markers -->
+<!--/div>
+< Angular Template -->
+<div>
+  <gmp-map-3d #map3dContainer id="map3d-container" style="width: 100%; height: 100vh; position: relative;" center="37.7749,-122.4194,500" tilt="65" heading="90" range="2000" default-ui-disabled></gmp-map-3d>
+</div>
+
+
+<div id="mascot" (click)="toggleMascotPopup()" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">
+  <img src="assets/mascot.png" alt="Map Assistant">
+  <div id="speechBubble" *ngIf="isMascotPopupVisible">
+    <p>What experience would you like?</p>
+    <button (click)="setPreference('relaxation')">Relaxation</button>
+    <button (click)="setPreference('adventure')">Adventure</button>
+    <button (click)="setPreference('luxury')">Luxury</button>
+  </div>
+</div>

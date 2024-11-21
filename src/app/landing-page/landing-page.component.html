@@ -1,0 +1,23 @@
+<div>
+  <h1>Explore Cultural Destinations</h1>
+  <div *ngFor="let theme of themeOptions">
+    <button (click)="onThemeSelect(theme)">{{ theme }}</button>
+  </div>
+
+  <div *ngIf="locations.length > 0">
+    <h2>Locations Based on {{ selectedTheme }}</h2>
+    <ul>
+      <li *ngFor="let location of locations">{{ location.name }}</li>
+    </ul>
+
+    <h3>Want to add a specific place to your trip?</h3>
+    <input
+      type="text"
+      [(ngModel)]="additionalLocation"
+      placeholder="Enter a location..."
+    />
+    <button (click)="onPlaceAdd()">Add Location</button>
+  </div>
+
+  <button *ngIf="locations.length > 0" (click)="startTour()">Start Tour</button>
+</div>

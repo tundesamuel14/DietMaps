@@ -1,0 +1,18 @@
+#startTourButton {
+    position: absolute;
+    top: 10px;
+    left: 60px; /* Positioned slightly to the right of the search box */
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  #stopTourButton {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Far right of the screen */
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
