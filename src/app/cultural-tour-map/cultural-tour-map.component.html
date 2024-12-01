@@ -1,12 +1,28 @@
 <div id="mapContainer" style="width: 100%; height: 100vh; position: relative;">
-    <gmp-map-3d #tourMap id="tourMap" tilt="67.5" heading="0" range="3000" center="40.758, -73.9855" default-ui-disabled>
-      <gmp-polygon-3d #tourPolygon fill-color="rgba(255, 0, 0, 0.5)" stroke-color="#0000ff" stroke-width="8" extruded></gmp-polygon-3d>
-    </gmp-map-3d>
-  
-    <!-- Start Tour Button on the Left -->
-    <button id="startTourButton" (click)="startCityFlyThrough(selectedTheme)">Start Tour</button>
-  
-    <!-- Stop Tour Button on the Right -->
+  <!-- 3D Map -->
+  <gmp-map-3d #tourMap id="tourMap" tilt="67.5" heading="0" range="3000" center="40.758, -73.9855" default-ui-disabled>
+    <gmp-polygon-3d
+      #tourPolygon
+      fill-color="rgba(255, 0, 0, 0.5)"
+      stroke-color="#0000ff"
+      stroke-width="8"
+      extruded>
+    </gmp-polygon-3d>
+  </gmp-map-3d>
+
+  <!-- Theme Information -->
+  <div id="themeInfo" style="position: absolute; top: 10px; left: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px;">
+    <h3>Selected Theme: {{ selectedTheme }}</h3>
+    <ul>
+      <li *ngFor="let location of locations">
+        {{ location.name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Control Buttons -->
+  <div id="controls" style="position: absolute; bottom: 10px; left: 10px;">
+    <button id="startTourButton" (click)="startCityFlyThrough()">Start Tour</button>
     <button id="stopTourButton" (click)="stopTour()">Stop Tour</button>
   </div>
-  
+</div>
