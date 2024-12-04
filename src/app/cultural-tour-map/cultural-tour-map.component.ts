@@ -90,9 +90,9 @@ export class CulturalTourMapComponent implements AfterViewInit {
 
         this.map3D.flyCameraTo({
           endCamera: {
-            center: { lat: currentLocation.lat, lng: currentLocation.lng, altitude: 500 },
-            tilt: 20,
-            range: 50,
+            center: { lat: currentLocation.lat, lng: currentLocation.lng, altitude: 0 },
+            tilt: 67.5,
+            range: 1300,
           },
           durationMillis: 20000,
         });
@@ -111,9 +111,9 @@ export class CulturalTourMapComponent implements AfterViewInit {
 
             this.map3D.flyCameraAround({
               camera: {
-                center: { lat: currentLocation.lat, lng: currentLocation.lng, altitude: 500 },
+                center: { lat: currentLocation.lat, lng: currentLocation.lng, altitude: 0 },
                 tilt: 67.5,
-                range: 550,
+                range: 1300,
               },
               durationMillis: 45000,
               rounds: 1,

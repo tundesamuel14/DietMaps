@@ -1,0 +1,103 @@
+.restaurant-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .map-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 64px); /* Adjust for the toolbar height */
+  }
+  
+  .map3d-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .restaurant-details-popup {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+  }
+  
+  .control-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .restaurant-details-popup {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 15px; /* Add some padding for content */
+  }
+  
+  .restaurant-details-popup h3 {
+    margin-top: 0;
+  }
+  
+  .restaurant-details-popup ul {
+    padding-left: 20px;
+    list-style: none;
+  }
+  
+  .restaurant-details-popup ul li {
+    margin-bottom: 5px;
+  }
+  
+  .restaurant-details-popup a {
+    color: #1976d2; /* Material Design blue for links */
+    text-decoration: none;
+  }
+  
+  .restaurant-details-popup a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .restaurant-container.blur .map-container {
+    filter: blur(5px);
+    pointer-events: none;
+  }
+  
+  .popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .restaurant-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  
